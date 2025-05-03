@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.stroeer.StroeerChallengeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-03T14:09:13" hostname="Mac" time="0.055">
-  <properties/>
-  <testcase name="test the server is running" classname="com.stroeer.StroeerChallengeTest" time="0.055"/>
-  <system-out><![CDATA[?[36m16:09:13.578?[0;39m ?[1;30m[Test worker @coroutine#2]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.c.DefaultApplicationContext$RuntimeConfiguredEnvironment?[0;39m - Established active environments: [test]
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

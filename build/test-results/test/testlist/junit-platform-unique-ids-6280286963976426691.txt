@@ -1,8 +1,0 @@
-[engine:kotest]/[spec:com.stroeer.StroeerChallengeTest]/[test:test the server is running]
-[engine:kotest]/[spec:com.stroeer.controller.CommentsControllerTest]/[test:test GET comments endpoint success]
-[engine:kotest]/[spec:com.stroeer.controller.CommentsControllerTest]/[test:test GET comments endpoint user not found]
-[engine:kotest]/[spec:com.stroeer.controller.CommentsControllerTest]/[test:test GET comments endpoint posts not found]
-[engine:kotest]/[spec:com.stroeer.service.CommentsServiceTest]/[test:getUserComments should return user and posts successfully]
-[engine:kotest]/[spec:com.stroeer.service.CommentsServiceTest]/[test:getUserComments should handle user not found]
-[engine:kotest]/[spec:com.stroeer.service.CommentsServiceTest]/[test:getUserComments should handle posts not found]
-[engine:kotest]/[spec:com.stroeer.service.CommentsServiceTest]/[test:getUserComments should handle exceptions from user client]

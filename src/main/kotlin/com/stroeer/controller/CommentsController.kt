@@ -25,8 +25,7 @@ class CommentsController(
         log.info("GET call for user: $userId")
         return commentsService.getUserComments(userId).let { HttpResponse.ok(it) }
     }
-        
-    
+
     companion object {
         val log: Logger = LoggerFactory.getLogger(CommentsController::class.java)
     }
