@@ -42,5 +42,11 @@ The application's logic is based on the following steps:
 5. Handle exceptions that may occur during the process; e.g., no data is available for the given user id.
 6. Log the API calls and responses for tracking purposes.
 
+## Security
+The application does not implement any form of authentication or authorization.
+That means that anyone can access the API endpoints without any authentication or authorization.
+
+Such mechanisms can be easily implemented to make the application more secure using basic [Micronaut Security](https://micronaut-projects.github.io/micronaut-security/latest/guide/) techniques, such as [JWT tokens](https://micronaut-projects.github.io/micronaut-security/latest/guide/#jwt) or [Basic Auth](https://micronaut-projects.github.io/micronaut-security/latest/guide/#basicAuth).
+
 ## Copyright
 Copyright &copy; 2025 Kareem Elzayat
