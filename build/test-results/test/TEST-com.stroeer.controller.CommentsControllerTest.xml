@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.stroeer.controller.CommentsControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-03T13:29:29" hostname="Mac" time="0.076">
+  <properties/>
+  <testcase name="test GET comments endpoint success" classname="com.stroeer.controller.CommentsControllerTest" time="0.068"/>
+  <testcase name="test GET comments endpoint user not found" classname="com.stroeer.controller.CommentsControllerTest" time="0.003"/>
+  <testcase name="test GET comments endpoint posts not found" classname="com.stroeer.controller.CommentsControllerTest" time="0.002"/>
+  <system-out><![CDATA[?[36m15:29:29.105?[0;39m ?[1;30m[pool-1-thread-1 @coroutine#6]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.c.DefaultApplicationContext$RuntimeConfiguredEnvironment?[0;39m - Established active environments: [test]
+?[36m15:29:29.150?[0;39m ?[1;30m[pool-1-thread-1 @coroutine#6]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-2 - Starting...
+?[36m15:29:29.152?[0;39m ?[1;30m[pool-1-thread-1 @coroutine#6]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.pool.HikariPool?[0;39m - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:devDb user=SA
+?[36m15:29:29.152?[0;39m ?[1;30m[pool-1-thread-1 @coroutine#6]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-2 - Start completed.
+?[36m15:29:29.156?[0;39m ?[1;30m[pool-1-thread-1 @coroutine#6]?[0;39m ?[34mINFO ?[0;39m ?[35mo.h.c.i.RegionFactoryInitiator?[0;39m - HHH000026: Second-level cache disabled
+?[36m15:29:29.160?[0;39m ?[1;30m[pool-1-thread-1 @coroutine#6]?[0;39m ?[34mINFO ?[0;39m ?[35mo.hibernate.orm.connections.pooling?[0;39m - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+?[36m15:29:29.309?[0;39m ?[1;30m[Test worker @coroutine#3]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-2 - Shutdown initiated...
+?[36m15:29:29.337?[0;39m ?[1;30m[Test worker @coroutine#3]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-2 - Shutdown completed.
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/kareemelzayat/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.0/8a17b8b598c80fd624df6c38ac5bffd13100418e/byte-buddy-agent-1.17.0.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

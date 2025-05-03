@@ -1,18 +1,18 @@
 package com.stroeer.controller
 
+import com.stroeer.model.CommentsResponse
 import com.stroeer.service.CommentsService
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
-import io.micronaut.security.annotation.Secured
-import io.micronaut.security.rules.SecurityRule
+import io.micronaut.http.annotation.PathVariable
 
 @Controller("/comments")
-@Secured(SecurityRule.IS_AUTHENTICATED)
 class CommentsController(
-    private val commentsService: CommentsService,
+    private val commentsService: CommentsService
 ) {
 
-    @Get("/")
-    suspend fun getComments() = HttpResponse.ok<String>()
+    @Get("/{userId}")
+    suspend fun getComments(@PathVariable userId: Long): HttpResponse<CommentsResponse> =
+        commentsService.getUserComments(userId).let { HttpResponse.ok(it) }
 }

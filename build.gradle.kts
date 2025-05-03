@@ -1,7 +1,7 @@
 plugins {
     id("org.jetbrains.kotlin.plugin.allopen") version "2.1.20"
     id("org.jetbrains.kotlin.plugin.jpa") version "2.1.20"
-    id("com.google.devtools.ksp") version "2.1.20-2.0.1"
+    id("org.jetbrains.kotlin.kapt") version "2.1.20"
     id("org.jetbrains.kotlin.jvm") version "2.1.20"
 
     id("io.micronaut.test-resources") version "4.5.3"
@@ -20,10 +20,10 @@ repositories {
 }
 
 dependencies {
-    ksp("io.micronaut:micronaut-http-validation")
-    ksp("io.micronaut.data:micronaut-data-processor")
-    ksp("io.micronaut.serde:micronaut-serde-processor")
-    ksp("io.micronaut.validation:micronaut-validation-processor")
+    kapt("io.micronaut:micronaut-http-validation")
+    kapt("io.micronaut.data:micronaut-data-processor")
+    kapt("io.micronaut.serde:micronaut-serde-processor")
+    kapt("io.micronaut.validation:micronaut-validation-processor")
 
     implementation("io.micronaut:micronaut-aop")
     implementation("io.micronaut:micronaut-retry")
