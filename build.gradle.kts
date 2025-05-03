@@ -1,10 +1,8 @@
 plugins {
-    id("org.jetbrains.kotlin.plugin.allopen") version "2.1.20"
     id("org.jetbrains.kotlin.plugin.jpa") version "2.1.20"
     id("org.jetbrains.kotlin.kapt") version "2.1.20"
     id("org.jetbrains.kotlin.jvm") version "2.1.20"
 
-    id("io.micronaut.test-resources") version "4.5.3"
     id("io.micronaut.application") version "4.5.3"
     id("io.micronaut.aot") version "4.5.3"
 
@@ -92,8 +90,4 @@ micronaut {
         optimizeNetty = true
         replaceLogbackXml = true
     }
-}
-
-allOpen {
-    annotation("io.micronaut.transaction.annotation.Transactional")
 }
