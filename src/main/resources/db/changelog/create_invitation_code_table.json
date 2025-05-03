@@ -1,0 +1,90 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "create mstqr invitation code table",
+        "author": "Kareem Elzayat",
+        "preConditions": [
+          {
+            "onFail": "MARK_RAN"
+          },
+          {
+            "not": [
+              {
+                "tableExists": {
+                  "tableName": "mstqr_invitation_code"
+                }
+              }
+            ]
+          }
+        ],
+        "changes": [
+          {
+            "createTable": {
+              "tableName": "mstqr_invitation_code",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "UUID",
+                    "constraints": {
+                      "primaryKey": true
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "code",
+                    "type": "VARCHAR(12)",
+                    "constraints": {
+                      "unique": true,
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "used",
+                    "type": "BOOLEAN",
+                    "constraints": {
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "mstqr_host_id",
+                    "type": "UUID",
+                    "constraints": {
+                      "nullable": false,
+                      "foreignKeyName": "fk_mstqr_host_id",
+                      "references": "mstqr_host (id)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "createIndex": {
+              "tableName": "mstqr_invitation_code",
+              "indexName": "mstqr_invitation_code_code_idx",
+              "columns": [
+                {
+                  "column": {
+                    "name": "code"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "used"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

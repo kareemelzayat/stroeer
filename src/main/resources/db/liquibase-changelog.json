@@ -1,0 +1,16 @@
+{
+  "databaseChangeLog": [
+    {
+      "include": {
+        "file": "changelog/create_mstqr_tables.json",
+        "relativeToChangelogFile": true
+      }
+    },
+    {
+      "include": {
+        "file": "changelog/create_invitation_code_table.json",
+        "relativeToChangelogFile": true
+      }
+    }
+  ]
+}

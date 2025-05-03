@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.stroeer
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [annotation-api, app-name, config4k, gradle, http-client-test, jackson-databind, jdbc-hikari, junit, kapt, kotlin, kotlin-application, kotlin-extension-functions, liquibase, logback, micronaut-aop, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, postgres, readme, retry, security, security-annotations, security-jwt, shade, static-resources, testcontainers, validation]
