@@ -1,5 +1,4 @@
 plugins {
-    id("org.jetbrains.kotlin.plugin.jpa") version "2.1.20"
     id("org.jetbrains.kotlin.kapt") version "2.1.20"
     id("org.jetbrains.kotlin.jvm") version "2.1.20"
 
@@ -19,17 +18,10 @@ repositories {
 
 dependencies {
     kapt("io.micronaut:micronaut-http-validation")
-    kapt("io.micronaut.data:micronaut-data-processor")
     kapt("io.micronaut.serde:micronaut-serde-processor")
-    kapt("io.micronaut.validation:micronaut-validation-processor")
 
-    implementation("io.micronaut:micronaut-aop")
     implementation("io.micronaut:micronaut-retry")
-    implementation("io.micronaut.reactor:micronaut-reactor")
     implementation("io.micronaut:micronaut-jackson-databind")
-
-    implementation("io.micronaut.validation:micronaut-validation")
-    implementation("io.micronaut.liquibase:micronaut-liquibase")
 
     // Micronaut Kotlin
     implementation("io.micronaut.kotlin:micronaut-kotlin-extension-functions")
@@ -45,12 +37,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
-
-    // Micronaut Data
-    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
-    testImplementation("io.micronaut:micronaut-http-client")
-    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
-    runtimeOnly("com.h2database:h2")
 
     // Logging
     runtimeOnly("ch.qos.logback:logback-classic")

@@ -11,6 +11,12 @@ public final class CommentsController {
         super();
     }
     
+    /**
+     * Retrieves comments associated with a specific user.
+     *
+     * @param userId the unique identifier of the user whose comments are to be retrieved
+     * @return an HTTP response containing the user's details and a list of their comments
+     */
     @io.micronaut.http.annotation.Get(value = "/{userId}")
     @org.jetbrains.annotations.Nullable()
     public final java.lang.Object getComments(@io.micronaut.http.annotation.PathVariable()

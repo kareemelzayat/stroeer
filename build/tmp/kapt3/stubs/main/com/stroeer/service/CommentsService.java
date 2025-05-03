@@ -11,6 +11,17 @@ public final class CommentsService {
         super();
     }
     
+    /**
+     * Retrieves a combined response of user details and their associated comments.
+     * This method fetches user information and a list of comments asynchronously
+     * and returns them as a combined `CommentsResponse`. If the user is not found,
+     * a `UserNotFoundException` is thrown.
+     *
+     * @param userId the unique identifier of the user whose details and comments are to be retrieved
+     * @return a `CommentsResponse` containing the user's details and their associated comments;
+     *        returns null if no data is available for the user
+     * @throws UserNotFoundException if the user is not found
+     */
     @org.jetbrains.annotations.Nullable()
     public final java.lang.Object getUserComments(long userId, @org.jetbrains.annotations.NotNull()
     kotlin.coroutines.Continuation<? super com.stroeer.model.CommentsResponse> $completion) {

@@ -25,14 +25,24 @@ class CommentsServiceTest : StringSpec({
 
         val result = commentsService.getUserComments(userId)
 
-        result?.user shouldBe userResponse
+        userResponse.apply {
+            result?.id shouldBe id
+            result?.name shouldBe name
+            result?.username shouldBe username
+            result?.email shouldBe email
+            result?.address shouldBe address
+            result?.phone shouldBe phone
+            result?.website shouldBe website
+            result?.company shouldBe company
+        }
         result?.comments shouldBe listOf(postResponse)
     }
 
     "getUserComments should handle user not found" {
         val userId = 2L
 
-        coEvery { userClient.getUser(userId) } throws UserNotFoundException()
+        coEvery { userClient.getUser(userId) } returns null
+        coEvery { userClient.getPostsByUser(userId) } returns emptyList()
 
         // Handle the exception or assert as needed
         try {
@@ -52,7 +62,16 @@ class CommentsServiceTest : StringSpec({
 
         val result = commentsService.getUserComments(userId)
 
-        result?.user shouldBe userResponse
+        userResponse.apply {
+            result?.id shouldBe id
+            result?.name shouldBe name
+            result?.username shouldBe username
+            result?.email shouldBe email
+            result?.address shouldBe address
+            result?.phone shouldBe phone
+            result?.website shouldBe website
+            result?.company shouldBe company
+        }
         result?.comments shouldBe emptyList()
     }
 
